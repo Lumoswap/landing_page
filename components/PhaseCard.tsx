@@ -22,10 +22,10 @@ const PhaseCard = ({ title, isActive, steps }: PhaseCardProps) => {
         </CardBody>
       </Card>
       <Spacer y={2} />
-      <Card style={{ height: "240px", width: "330px" }} className="px-2 py-2">
+      <Card style={{ height: "200px", width: "290px" }} className="px-2 py-2">
         <CardBody>
           {steps.map((step, index) => (
-            <p className="text-[15px]" key={`${step}-${index}`}>
+            <p className="text-[13px]" key={`${step}-${index}`}>
               {step}
             </p>
           ))}

@@ -1,69 +1,63 @@
 export type SiteConfig = typeof siteConfig;
 
 export const siteConfig = {
-  name: "Next.js + NextUI",
-  description: "Make beautiful websites regardless of your design experience.",
+  name: "Lumo Swap",
+  description:
+    "Cutting-edge decentralized exchange (DEX) built on the Creatorchain, a high-performance Layer 2 blockchain developed on Optimism’s Superchain",
   navItems: [
     {
       label: "Home",
-      href: "/",
+      href: "/"
     },
     {
       label: "Docs",
-      href: "/docs",
+      href: "/docs"
     },
     {
       label: "Pricing",
-      href: "/pricing",
+      href: "/pricing"
     },
     {
       label: "Blog",
-      href: "/blog",
+      href: "/blog"
     },
     {
       label: "About",
-      href: "/about",
-    },
+      href: "/about"
+    }
   ],
   navMenuItems: [
     {
       label: "Profile",
-      href: "/profile",
+      href: "/profile"
     },
     {
       label: "Dashboard",
-      href: "/dashboard",
+      href: "/dashboard"
     },
     {
       label: "Projects",
-      href: "/projects",
+      href: "/projects"
     },
     {
       label: "Team",
-      href: "/team",
+      href: "/team"
     },
     {
       label: "Calendar",
-      href: "/calendar",
+      href: "/calendar"
     },
     {
       label: "Settings",
-      href: "/settings",
+      href: "/settings"
     },
     {
       label: "Help & Feedback",
-      href: "/help-feedback",
+      href: "/help-feedback"
     },
     {
       label: "Logout",
-      href: "/logout",
-    },
+      href: "/logout"
+    }
   ],
-  links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
-  },
 };

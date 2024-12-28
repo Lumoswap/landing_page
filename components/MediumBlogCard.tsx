@@ -47,7 +47,7 @@ const MediumBlogCard = ({ url, limit }: MediumBlogCardProps) => {
   }, [url, limit]);
 
   return (
-    <div style={{ display: "flex", gap: "20px" }}>
+    <div className="flex gap-4 flex-wrap justify-center">
       {isLoading
         ? Array.from({ length: limit }).map((_, index) => (
             <Card
@@ -55,6 +55,8 @@ const MediumBlogCard = ({ url, limit }: MediumBlogCardProps) => {
               isHoverable
               isPressable
               style={{ width: "400px", cursor: "pointer" }}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <CardBody
                 style={{ display: "flex", flexDirection: "column", gap: "8px" }}
@@ -83,6 +85,8 @@ const MediumBlogCard = ({ url, limit }: MediumBlogCardProps) => {
               isPressable
               style={{ width: "400px", cursor: "pointer", height: "400px" }}
               onPress={() => window.open(blog.link, "_blank")}
+              data-aos="fade-up"
+              data-aos-delay={index * 100}
             >
               <CardBody>
                 <Image

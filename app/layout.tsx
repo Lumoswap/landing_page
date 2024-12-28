@@ -1,36 +1,43 @@
 import "@/styles/globals.css";
 import { Metadata, Viewport } from "next";
-import { Link } from "@nextui-org/link";
 import clsx from "clsx";
-
+import Image from "next/image";
 import { Providers } from "./providers";
 
 import { siteConfig } from "@/config/site";
 import { fontSans } from "@/config/fonts";
 import { Navbar } from "@/components/navbar";
-
+import {
+  FaDiscord,
+  FaGithub,
+  FaLinkedin,
+  FaTelegram,
+  FaTwitter
+} from "react-icons/fa";
 import "../styles/app.css";
+import { Divider, Spacer } from "@nextui-org/react";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: {
     default: siteConfig.name,
-    template: `%s - ${siteConfig.name}`,
+    template: `%s - ${siteConfig.name}`
   },
   description: siteConfig.description,
   icons: {
-    icon: "/favicon.ico",
-  },
+    icon: "/favicon.ico"
+  }
 };
 
 export const viewport: Viewport = {
   themeColor: [
     { media: "(prefers-color-scheme: light)", color: "white" },
-    { media: "(prefers-color-scheme: dark)", color: "black" },
-  ],
+    { media: "(prefers-color-scheme: dark)", color: "black" }
+  ]
 };
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode;
 }) {
@@ -40,7 +47,7 @@ export default function RootLayout({
       <body
         className={clsx(
           "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          fontSans.variable
         )}
       >
         <Providers themeProps={{ attribute: "class", defaultTheme: "dark" }}>
@@ -49,16 +56,100 @@ export default function RootLayout({
             <main className="container mx-auto max-w-7xl pt-16 px-6 flex-grow">
               {children}
             </main>
-            <footer className="w-full flex items-center justify-center py-3">
-              <Link
-                isExternal
-                className="flex items-center gap-1 text-current"
-                href="https://nextui-docs-v2.vercel.app?utm_source=next-app-template"
-                title="nextui.org homepage"
-              >
-                <span className="text-default-600">Powered by</span>
-                <p className="text-primary">NextUI</p>
-              </Link>
+            <footer className="container mx-auto max-w-7xl pt-16 px-6 flex-grow pb-20">
+              <div className="grid gap-10 sm:grid-cols-1 grid-cols-2 md:grid-cols-3 lg:grid-cols-5">
+                <div className="flex flex-col">
+                  <p className="font-bold text-white">ABOUT</p>
+                  <Spacer y={2} />
+                  <Link href="">
+                    <p className="text-sm">Contact</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Blog</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Tokenomics</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Creator Chain</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Lumos - Lab</p>
+                  </Link>
+                </div>
+                <div className="flex flex-col">
+                  <p className="font-bold text-white">HELP</p>
+                  <Spacer y={2} />
+                  <Link href="">
+                    <p className="text-sm">Introduction to creator chain</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Lumos Academy</p>
+                  </Link>
+                </div>
+                <div className="flex flex-col">
+                  <p className="font-bold text-white">DEVELOPER</p>
+                  <Spacer y={2} />
+                  <Link href="">
+                    <p className="text-sm">Github</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Documentation</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Creatorchain docs</p>
+                  </Link>
+                </div>
+                <div className="flex flex-col">
+                  <p className="font-bold text-white">BUSINESS</p>
+                  <Spacer y={2} />
+                  <Link href="">
+                    <p className="text-sm">Partnership</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Token Launch</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Staking Pools</p>
+                  </Link>
+                  <Link href="">
+                    <p className="text-sm">Brand Asset</p>
+                  </Link>
+                </div>
+
+                <div className="flex flex-col justify-start items-end">
+                  <Image
+                    src="/images/lumo.svg"
+                    width={71}
+                    height={82}
+                    alt="logo"
+                  />
+                  <Divider
+                    style={{
+                      height: "1px",
+                      width: "100%"
+                    }}
+                    className="my-4 bg-default"
+                  />
+                  <div className="flex gap-4">
+                    <Link href="">
+                      <FaDiscord />
+                    </Link>
+                    <Link href="">
+                      <FaGithub />
+                    </Link>
+                    <Link href="">
+                      <FaLinkedin />
+                    </Link>
+                    <Link href="">
+                      <FaTelegram />
+                    </Link>
+                    <Link href="">
+                      <FaTwitter />
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </footer>
           </div>
         </Providers>

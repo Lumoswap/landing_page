@@ -61,27 +61,30 @@ export default function RootLayout({
                 <div className="flex flex-col">
                   <p className="font-bold text-white">ABOUT</p>
                   <Spacer y={2} />
-                  <Link href="">
-                    <p className="text-sm">Contact</p>
-                  </Link>
-                  <Link href="">
+                  <Link href="https://medium.com/@lumoswap" target="_blank">
                     <p className="text-sm">Blog</p>
                   </Link>
-                  <Link href="">
+                  <Link href="/Lumoswap Whitepaper.pdf" target="_blank">
+                    <p className="text-sm">Whitepaper</p>
+                  </Link>
+                  <Link href="/comingsoon">
                     <p className="text-sm">Tokenomics</p>
                   </Link>
-                  <Link href="">
+                  <Link href="https://creatorchain.io/" target="_blank">
                     <p className="text-sm">Creator Chain</p>
                   </Link>
-                  <Link href="">
+                  <Link href="/comingsoon">
                     <p className="text-sm">Lumos - Lab</p>
                   </Link>
                 </div>
                 <div className="flex flex-col">
                   <p className="font-bold text-white">HELP</p>
                   <Spacer y={2} />
-                  <Link href="">
-                    <p className="text-sm">Introduction to creator chain</p>
+                  <Link
+                    href="https://x.com/buildoncreator/status/1864258435669270987?s=46"
+                    target="_blank"
+                  >
+                    <p className="text-sm">Introduction to creator</p>
                   </Link>
                   <Link href="">
                     <p className="text-sm">Lumos Academy</p>
@@ -90,34 +93,37 @@ export default function RootLayout({
                 <div className="flex flex-col">
                   <p className="font-bold text-white">DEVELOPER</p>
                   <Spacer y={2} />
-                  <Link href="">
+                  <Link href="https://github.com/Lumoswap" target="_blank">
                     <p className="text-sm">Github</p>
                   </Link>
-                  <Link href="">
+                  <Link href="/comingsoon">
                     <p className="text-sm">Documentation</p>
                   </Link>
-                  <Link href="">
+                  <Link href="https://docs.creatorchain.io/">
                     <p className="text-sm">Creatorchain docs</p>
                   </Link>
                 </div>
                 <div className="flex flex-col">
                   <p className="font-bold text-white">BUSINESS</p>
                   <Spacer y={2} />
-                  <Link href="">
+                  <Link href="/comingsoon">
                     <p className="text-sm">Partnership</p>
                   </Link>
-                  <Link href="">
+                  <Link href="/comingsoon">
                     <p className="text-sm">Token Launch</p>
                   </Link>
-                  <Link href="">
+                  <Link href="/comingsoon">
                     <p className="text-sm">Staking Pools</p>
                   </Link>
-                  <Link href="">
+                  <Link
+                    href="https://drive.google.com/drive/folders/1K2MBYMeGJ334OCXXxgvh01nR9m_g8xZd?usp=drive_link"
+                    target="_blank"
+                  >
                     <p className="text-sm">Brand Asset</p>
                   </Link>
                 </div>
 
-                <div className="flex flex-col justify-start items-end">
+                <div className="flex-col justify-start items-end hidden md:flex">
                   <Image
                     src="/images/lumo.svg"
                     width={71}
@@ -148,6 +154,41 @@ export default function RootLayout({
                       <FaTwitter />
                     </Link>
                   </div>
+                </div>
+              </div>
+              <div className="flex-col justify-start items-end md:hidden flex mt-20">
+                <Image
+                  src="/images/lumo.svg"
+                  width={71}
+                  height={82}
+                  alt="logo"
+                />
+                <Divider
+                  style={{
+                    height: "1px",
+                    width: "100%"
+                  }}
+                  className="my-4 bg-default"
+                />
+                <div className="flex gap-4">
+                  <Link href="">
+                    <FaDiscord />
+                  </Link>
+                  <Link href="https://github.com/Lumoswap" target="_blank">
+                    <FaGithub />
+                  </Link>
+                  <Link
+                    href="https://linkedin.com/company/lumoswap"
+                    target="_blank"
+                  >
+                    <FaLinkedin />
+                  </Link>
+                  <Link href="https://t.me/lumoswap" target="_blank">
+                    <FaTelegram />
+                  </Link>
+                  <Link href="https://x.com/lumoswap" target="_blank">
+                    <FaTwitter />
+                  </Link>
                 </div>
               </div>
             </footer>

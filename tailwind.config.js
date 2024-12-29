@@ -41,13 +41,13 @@ module.exports = {
               200: "#fbf386",
               300: "#faee59",
               400: "#f8ea2d",
-              500: "#f7e500",
+              500: "#F7E600",
               600: "#ccbd00",
               700: "#a19500",
               800: "#756d00",
               900: "#4a4500",
               foreground: "#000",
-              DEFAULT: "#f7e500"
+              DEFAULT: "#F7E600"
             },
             secondary: {
               50: "#eee4f8",
@@ -136,7 +136,7 @@ module.exports = {
               DEFAULT: "#111111",
               foreground: "#fff"
             },
-            focus: "#F7E500",
+            focus: "#F7E600",
             overlay: "#000000",
             divider: "#111111"
           }
@@ -159,13 +159,13 @@ module.exports = {
               50: "#504a00",
               100: "#887e00",
               200: "#bfb100",
-              300: "#f7e500",
+              300: "#F7E600",
               400: "#f9eb39",
               500: "#fbf173",
               600: "#fcf7ac",
               700: "#fefce6",
               foreground: "#000",
-              DEFAULT: "#bfb100"
+              DEFAULT: "#F7E600"
             },
             secondary: {
               50: "#270d41",
@@ -244,7 +244,7 @@ module.exports = {
               DEFAULT: "#52525b",
               foreground: "#fff"
             },
-            focus: "#F7E500",
+            focus: "#F7E600",
             overlay: "#ffffff",
             divider: "#ffffff"
           }

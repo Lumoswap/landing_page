@@ -25,7 +25,7 @@ export default function Home() {
     AOS.refresh();
   }, []);
   const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
+    "Effortlessly trade a wide variety of digital assets with minimal fees and lightning-fast execution.";
 
   const [activeTab, setActiveTab] = useState("phase1");
 
@@ -38,7 +38,7 @@ export default function Home() {
         >
           <span
             data-aos="fade-up"
-            className="text-white text-3xl lg:text-5xl font-medium tracking-tight inline-block leading-10"
+            className="text-white text-2xl md:text-3xl lg:text-5xl font-medium tracking-tight inline-block leading-10"
           >
             Empowering Your{" "}
             <span className="text-default-400"> DeFi Journey </span> <br /> with
@@ -49,11 +49,20 @@ export default function Home() {
           <p
             data-aos="fade-up"
             data-aos-delay="100"
-            className="text-md text-default-400"
+            className="text-md text-default-400 hidden md:block"
           >
             Cutting-edge decentralized exchange (DEX) built on the Creatorchain,
             a <br />
             high-performance Layer 2 blockchain developed on Optimism’s
+            Superchain
+          </p>
+          <p
+            data-aos="fade-up"
+            data-aos-delay="100"
+            className="text-sm text-default-400 md:hidden block"
+          >
+            Cutting-edge decentralized exchange (DEX) built on the Creatorchain,
+            a high-performance Layer 2 blockchain developed on Optimism’s
             Superchain
           </p>
           <Spacer y={5} />
@@ -78,6 +87,7 @@ export default function Home() {
           src="/images/swap.svg"
           width={400}
           height={400}
+          className="h-[400px] w-[400px] md:h-[500px] md:w-[500px]"
           alt="Hero"
         />
         <Spacer y={36} />
@@ -96,7 +106,7 @@ export default function Home() {
             data-aos="fade-up"
           />
           <Spacer y={24} />
-          <span className="text-white text-3xl text-center lg:text-5xl font-medium tracking-tight inline-block leading-10">
+          <span className="text-white text-2xl md:text-3xl lg:text-5xl text-center font-medium tracking-tight inline-block leading-10">
             Build On Superchain, <br />
             <span className="text-default-400"> supported by </span>{" "}
             Creatorchain
@@ -143,9 +153,9 @@ export default function Home() {
             </h3>
           </div>
           <Spacer y={10} />
-          <div className="flex flex-col gap-4 justify-between md:flex-row">
+          <div className="flex flex-col gap-10 justify-between md:flex-row">
             <div className="flex-1" data-aos="fade-right">
-              <p>
+              <p className="text-default-400 text-sm md:text-lg pb-4 text-center md:text-left">
                 At Lumoswap, we're revolutionizing the DeFi space by offering
                 advanced trading features, robust financial tools, and a
                 seamless user experience that puts you in control of your
@@ -153,18 +163,22 @@ export default function Home() {
               </p>
               <Accordion selectionMode="multiple">
                 <AccordionItem
-                  startContent={<I3DRotate size="20" color="#FFD700" />}
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
                   key="1"
                   aria-label="Accordion 1"
                   title={
-                    <p className="font-semibold text-medium">Token Swaps:</p>
+                    <p className="font-semibold text-medium">
+                      Token Swaps & & Liquidity Pools
+                    </p>
                   }
                 >
-                  Effortlessly trade a wide variety of digital assets with
-                  minimal fees and lightning-fast execution.
+                  <p className="text-sm md:text-base">
+                    Instant token swaps powered by liquidity pools, rewarding
+                    liquidity providers with transaction fees.
+                  </p>
                 </AccordionItem>
                 <AccordionItem
-                  startContent={<I3DRotate size="20" color="#FFD700" />}
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
                   key="2"
                   aria-label="Accordion 2"
                   title={
@@ -173,7 +187,10 @@ export default function Home() {
                     </p>
                   }
                 >
-                  {defaultContent}
+                  <p className="text-sm md:text-base">
+                    Trade assets across blockchains seamlessly without
+                    centralized intermediaries.
+                  </p>
                 </AccordionItem>
                 <AccordionItem
                   title={
@@ -181,11 +198,14 @@ export default function Home() {
                       Perpetual Futures
                     </p>
                   }
-                  startContent={<I3DRotate size="20" color="#FFD700" />}
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
                   key="3"
                   aria-label="Accordion 3"
                 >
-                  {defaultContent}
+                  <p className="text-sm md:text-base">
+                    Trade perpetual contracts with no expiry, supporting
+                    advanced strategies and leverage.
+                  </p>
                 </AccordionItem>
                 <AccordionItem
                   title={
@@ -193,21 +213,85 @@ export default function Home() {
                       Staking & Yield Farming
                     </p>
                   }
-                  startContent={<I3DRotate size="20" color="#FFD700" />}
-                  key="3"
-                  aria-label="Accordion 3"
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
+                  key="4"
+                  aria-label="Accordion 4"
                 >
-                  {defaultContent}
+                  <p className="text-sm md:text-base">
+                    Earn rewards by staking tokens or providing liquidity to
+                    farming pools.
+                  </p>
+                </AccordionItem>
+                <AccordionItem
+                  title={
+                    <p className="font-semibold text-medium">
+                      AI-Driven Token Analytics
+                    </p>
+                  }
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
+                  key="6"
+                  aria-label="Accordion 6"
+                >
+                  <p className="text-sm md:text-base">
+                    AI tools provide actionable insights for smarter trading and
+                    investment decisions.
+                  </p>
                 </AccordionItem>
                 <AccordionItem
                   title={
                     <p className="font-semibold text-medium">NFT Marketplace</p>
                   }
-                  startContent={<I3DRotate size="20" color="#FFD700" />}
-                  key="3"
-                  aria-label="Accordion 3"
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
+                  key="7"
+                  aria-label="Accordion 7"
                 >
-                  {defaultContent}
+                  <p className="text-sm md:text-base">
+                    Mint, trade, and collect NFTs directly on the Lumoswap
+                    platform.
+                  </p>
+                </AccordionItem>
+                <AccordionItem
+                  title={
+                    <p className="font-semibold text-medium">
+                      Portfolio Tracking
+                    </p>
+                  }
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
+                  key="8"
+                  aria-label="Accordion 8"
+                >
+                  <p className="text-sm md:text-base">
+                    Monitor portfolio performance across DeFi protocols and
+                    assets.
+                  </p>
+                </AccordionItem>
+                <AccordionItem
+                  title={
+                    <p className="font-semibold text-medium">
+                      Advanced Order Types
+                    </p>
+                  }
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
+                  key="9"
+                  aria-label="Accordion 9"
+                >
+                  <p className="text-sm md:text-base">
+                    Automate trading with limit orders, stop losses, and
+                    take-profit options.
+                  </p>
+                </AccordionItem>
+                <AccordionItem
+                  title={
+                    <p className="font-semibold text-medium">Governance</p>
+                  }
+                  startContent={<I3DRotate size="20" color="#F7E600" />}
+                  key="10"
+                  aria-label="Accordion 10"
+                >
+                  <p className="text-sm md:text-base">
+                    Token holders participate in decision-making, shaping
+                    Lumoswap’s future.
+                  </p>
                 </AccordionItem>
               </Accordion>
             </div>
@@ -219,6 +303,7 @@ export default function Home() {
                 src="/images/chart.svg"
                 width={500}
                 height={700}
+                className="h-[400px] w-[400px] md:h-[500px] md:w-[500px]"
                 alt="Partner"
               />
             </div>
@@ -301,12 +386,14 @@ export default function Home() {
                 data-aos="fade-up"
                 data-aos-delay="400"
                 steps={[
-                  "DEX Testnet Launch",
-                  "Testnet Task Launch",
-                  "User Onboarding Campaign",
+                  "Launch Additional Projects",
+                  "Telegram Mini App Launch",
+                  "Developer Grant Program",
+                  "New Product Release (Surprise)",
+                  "Marketing Campaigns",
                   "Partnership Expansion",
-                  "Academy Launch",
-                  "Perpetual Futures Testnet Launch"
+                  "Event Sponsorships",
+                  "Milestone Metrics: $1M TVL within 6 months, 20% user growth quarterly"
                 ]}
                 isActive={activeTab === "phase4"}
               />

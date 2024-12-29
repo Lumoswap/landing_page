@@ -11,10 +11,13 @@ import {
 import Image from "next/image";
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
+import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 export const Navbar = () => {
   const [activeHash, setActiveHash] = useState<string>("home");
+
+  const router = useRouter();
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -48,7 +51,11 @@ export const Navbar = () => {
       shouldHideOnScroll={false}
       style={{ zIndex: 10000, position: "fixed", top: 0 }}
     >
-      <NavbarBrand>
+      <NavbarBrand
+        onClick={() => {
+          router.push("/");
+        }}
+      >
         <Image
           priority
           src="/images/logo.svg"

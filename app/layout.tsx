@@ -24,6 +24,19 @@ export const metadata: Metadata = {
     template: `%s - ${siteConfig.name}`
   },
   description: siteConfig.description,
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://lumoswap.exchange",
+    siteName: "Lumoswap",
+    description: siteConfig.description,
+    images: [
+      {
+        url: "https://res.cloudinary.com/dq0xrvpcr/image/upload/v1735577065/blob_1735577064174.webp",
+        alt: siteConfig.name
+      }
+    ]
+  },
   icons: {
     icon: "/favicon.ico"
   }

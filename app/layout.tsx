@@ -138,19 +138,22 @@ export default function RootLayout({
                     className="my-4 bg-default"
                   />
                   <div className="flex gap-4">
-                    <Link href="">
+                    <Link href="https://discord.gg/SzbGznx6" target="_blank">
                       <FaDiscord />
                     </Link>
-                    <Link href="">
+                    <Link href="https://github.com/Lumoswap" target="_blank">
                       <FaGithub />
                     </Link>
-                    <Link href="">
+                    <Link
+                      href="https://linkedin.com/company/lumoswap"
+                      target="_blank"
+                    >
                       <FaLinkedin />
                     </Link>
-                    <Link href="">
+                    <Link href="https://t.me/lumoswap" target="_blank">
                       <FaTelegram />
                     </Link>
-                    <Link href="">
+                    <Link href="https://x.com/lumoswap" target="_blank">
                       <FaTwitter />
                     </Link>
                   </div>
@@ -171,7 +174,7 @@ export default function RootLayout({
                   className="my-4 bg-default"
                 />
                 <div className="flex gap-4">
-                  <Link href="">
+                  <Link href="https://discord.gg/SzbGznx6" target="_blank">
                     <FaDiscord />
                   </Link>
                   <Link href="https://github.com/Lumoswap" target="_blank">

@@ -144,7 +144,12 @@ export default function Home() {
         </div>
         <section id="features">
           <Spacer y={44} />
-          <div className="flex items-center justify-center flex-col">
+          <div
+            style={{
+              overflowX: "hidden"
+            }}
+            className="flex items-center justify-center flex-col"
+          >
             <h3
               data-aos="fade-up"
               className="text-3xl font-medium text-transparent bg-clip-text bg-gradient-to-r from-white to-yellow-500"
@@ -382,7 +387,7 @@ export default function Home() {
                 isActive={activeTab === "phase3"}
               />
               <PhaseCard
-                title="Testnet Rollout"
+                title="Growth and Expansion"
                 data-aos="fade-up"
                 data-aos-delay="400"
                 steps={[
